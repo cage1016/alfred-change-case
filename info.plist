@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>18929585-3A68-49C5-9472-452F520834E4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>42B80C1B-CC96-407C-96D8-BFC04E7712BC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1B804CDD-4D8B-42D6-ACBB-E5E1994FAC72</key>
 		<array>
 			<dict>
@@ -690,6 +703,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Copied '{query}'</string>
+				<key>title</key>
+				<string>Change Case</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>42B80C1B-CC96-407C-96D8-BFC04E7712BC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1077,6 +1111,13 @@
 			<key>ypos</key>
 			<integer>980</integer>
 		</dict>
+		<key>42B80C1B-CC96-407C-96D8-BFC04E7712BC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1515</integer>
+			<key>ypos</key>
+			<integer>1185</integer>
+		</dict>
 		<key>6A682A24-DBDA-4A68-9E3B-4E07FA3F4C24</key>
 		<dict>
 			<key>xpos</key>
@@ -1155,6 +1196,10 @@
 			<integer>320</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string>https://kaichu.io</string>
 </dict>
