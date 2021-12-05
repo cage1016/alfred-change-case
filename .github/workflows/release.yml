@@ -15,15 +15,18 @@ jobs:
         echo "::set-output name=tag::$(jq -r '.release.tag_name' "${GITHUB_EVENT_PATH}" | sed s/^v//)"
 
     - name: Build golang build
+      id: build
       run: |
         VERSION=${{ steps.event.outputs.tag }} ./build.sh
+        
+        echo "::set-output name=artifact::change-case-${{ steps.event.outputs.tag }}.alfredworkflow"
 
     - name: Upload to release
-      uses: actions/upload-release-asset@v1.0.1
+      uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ github.event.release.upload_url }}
-        asset_path: .change-case-${{ steps.event.outputs.tag }}.alfredworkflow
-        asset_name: change-case-${{ steps.event.outputs.tag }}.alfredworkflow
+        asset_path: ./${{ steps.build.outputs.artifact }}
+        asset_name: ${{ steps.build.outputs.artifact }}
         asset_content_type: application/zip
