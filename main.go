@@ -18,14 +18,14 @@ var M = map[string]struct {
 	Icon     string
 	Subtitle string
 }{
-	"camel":    {changecase.Camel, "icons/camel.png", "Convert to a string with the separators denoted by having the next letter capitalised"},
+	"camel":    {changecase.Camel, "icons/camel.png", "Convert to a string with the separators denoted by having the next letter capitalized"},
 	"constant": {changecase.Constant, "icons/constant.png", "Convert to an upper case, underscore separated string"},
 	"dot":      {changecase.Dot, "icons/dot.png", "Convert to a lower case, period separated string"},
 	"lower":    {changecase.Lower, "icons/lower.png", "Convert to a string in lower case"},
 	"lcfirst":  {changecase.LcFirst, "icons/lcfirst.png", "Convert to a string with the first character lower cased"},
 	"no":       {changecase.No, "icons/no.png", "Convert the string without any casing (lower case, space separated)"},
 	"param":    {changecase.Param, "icons/param.png", "Convert to a lower case, dash separated string"},
-	"pascal":   {changecase.Pascal, "icons/pascal.png", "Convert to a string denoted in the same fashion as camelCase, but with the first letter also capitalised"},
+	"pascal":   {changecase.Pascal, "icons/pascal.png", "Convert to a string denoted in the same fashion as camelCase, but with the first letter also capitalized"},
 	"path":     {changecase.Path, "icons/path.png", "Convert to a lower case, slash separated string"},
 	"sentence": {changecase.Sentence, "icons/sentence.png", "Convert to a lower case, space separated string"},
 	"snake":    {changecase.Snake, "icons/snake.png", "Convert to a lower case, underscore separated string"},

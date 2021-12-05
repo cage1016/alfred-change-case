@@ -1,4 +1,4 @@
-module github.com/cage1016/change-case-alfred-workflows
+module github.com/cage1016/alfred-change-case
 
 go 1.17
 
