@@ -1,5 +1,8 @@
 # Change case alfred workflows
 
+[![Release](https://github.com/cage1016/alfred-change-case/actions/workflows/release.yml/badge.svg)](https://github.com/cage1016/alfred-change-case/actions/workflows/release.yml)
+
+
 This is change case tools inspired by [change-case - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case) and wrapper by [ku/go-change-case](https://github.com/ku/go-change-case). Quickly change the case of a string or latest clipboard string and copy it to the clipboard.
 
 ## Select Change Case options
