@@ -4,13 +4,13 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build-change-case",
+            "label": "go-build",
             "type": "shell",
             "command": "/usr/local/go/bin/go",
             "args": [
                 "build",
                 "-o",
-                "change-case",
+                ".workflow/change-case",
             ],
             "group": {
                 "kind": "build",
@@ -19,11 +19,27 @@
             "problemMatcher": [],
         },
         {
-            "label": "install-to-alfred",
+            "label": "prepare-info.plist",
+            "type": "shell",
+            "command": "${config:envsubst.path}",
+            "args": [
+                ">.workflow/info.plist",
+                "<./info.plist.template",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+        },
+        {
+            "label": "install",
             "type": "process",
             "command": "${config:python.pythonPath}",
             "args": [
                 "${workspaceFolder}/workflow-install.py",
+                "-s",
+                ".workflow"
             ],
             "group": {
                 "kind": "build",
@@ -31,7 +47,8 @@
             },
             "problemMatcher": [],
             "dependsOn": [
-                "build-change-case"
+                "go-build",
+                "prepare-info.plist",
             ],
         },
     ]
