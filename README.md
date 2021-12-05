@@ -3,9 +3,10 @@
 ## Installation
 
 ## Usage
-![](./screenshots/1.gif)
-![](./screenshots/2.gif)
-![](./screenshots/3.png)
+![1](https://user-images.githubusercontent.com/678607/144731302-92538262-eac3-4573-820f-d5e9030bbffc.gif)
+![2](https://user-images.githubusercontent.com/678607/144731303-6eadcf39-472c-47ba-a9a9-f3d19500ea56.gif)
+![3](./screenshots/3.png)
+
 
 |Command|Explanation|
 |--|--|
