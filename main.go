@@ -90,14 +90,12 @@ func run() {
 	}
 
 	query := args[1]
-	if query != "" {
-		for _, h := range hs {
-			Fn(wf, M[h].Fn, M[h].Icon, M[h].Subtitle, args[1])
-		}
-	} else {
-		for _, h := range hs {
-			Fn(wf, M[h].Fn, M[h].Icon, M[h].Subtitle, string(clipboard.Read(clipboard.FmtText)))
-		}
+	if query == "" {
+		query = string(clipboard.Read(clipboard.FmtText))
+	}
+
+	for _, h := range hs {
+		Fn(wf, M[h].Fn, M[h].Icon, M[h].Subtitle, query)
 	}
 
 	wf.SendFeedback()
