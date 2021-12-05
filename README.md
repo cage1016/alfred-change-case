@@ -33,3 +33,9 @@ This is change case tools inspired by [change-case - Visual Studio Marketplace](
 |cc title| Convert to a space separated string with the first character of every word upper cased|
 |cc upper| Convert to a string in upper case|
 |cc ucfirst| Convert to a string with the first character upper cased|
+
+## Contribute
+If you find any bug or want to propose a new feature, please open an issue to discuss it.
+
+## License
+This repository contains free software released under the MIT Licence. Please check out the [LICENSE](./LICENSE) file for details.
