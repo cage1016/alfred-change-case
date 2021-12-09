@@ -20,7 +20,7 @@ This is change case tools inspired by [change-case - Visual Studio Marketplace](
 
 |Command|Explanation|
 |--|--|
-|cc commands| list camel, constant, dot, lower, lcfirst, no, param, pascal, path, sentence, snake, swap, title, upper, ucfirst All|
+|cc commands| list camel, constant, dot, lower, lcfirst, no, param, pascal, path, sentence, snake, swap, title, upper, ucfirst, hashtag All|
 |cc camel| Convert to a string with the separators denoted by having the next letter capitalized|
 |cc constant| Convert to an upper case, underscore separated string|
 |cc dot| Convert to a lower case, period separated string|
@@ -36,6 +36,7 @@ This is change case tools inspired by [change-case - Visual Studio Marketplace](
 |cc title| Convert to a space separated string with the first character of every word upper cased|
 |cc upper| Convert to a string in upper case|
 |cc ucfirst| Convert to a string with the first character upper cased|
+|cc hashtag| Convert to a string, space separated string with hashtag symbols|
 
 ## Contribute
 If you find any bug or want to propose a new feature, please open an issue to discuss it.

@@ -47,6 +47,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1DAD602D-927A-49A8-B430-D7DF8CF46921</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>18929585-3A68-49C5-9472-452F520834E4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>22AEA759-6C80-44E7-B346-CD03F04A4437</key>
 		<array>
 			<dict>
@@ -684,46 +697,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>18929585-3A68-49C5-9472-452F520834E4</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Copied '{query}'</string>
-				<key>title</key>
-				<string>Change Case</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>42B80C1B-CC96-407C-96D8-BFC04E7712BC</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -818,6 +791,46 @@
 			<string>25C0C74E-0E5B-4A7D-AEB8-0083E0D595B2</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>18929585-3A68-49C5-9472-452F520834E4</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Copied '{query}'</string>
+				<key>title</key>
+				<string>Change Case</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>42B80C1B-CC96-407C-96D8-BFC04E7712BC</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1064,6 +1077,55 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>cc hashtag</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./change-case hashtag "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Convert to a string, space separated string with hashtag symbols</string>
+				<key>title</key>
+				<string>Change Case HashTag</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1DAD602D-927A-49A8-B430-D7DF8CF46921</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>This is change case tools inspired by change-case - Visual Studio Marketplace and wrapper by ku/go-change-case. Quickly change the case of a string or latest clipboard string and copy it to the clipboard.
@@ -1083,7 +1145,8 @@
 `cc swap` Convert to a string with every character case reversed
 `cc title` Convert to a space separated string with the first character of every word upper cased
 `cc upper` Convert to a string in upper case
-`cc ucfirst` Convert to a string with the first character upper cased</string>
+`cc ucfirst` Convert to a string with the first character upper cased
+`cc hashtag` Convert to a string, space separated string with hashtag symbols</string>
 	<key>uidata</key>
 	<dict>
 		<key>05DE2A2D-883F-4B22-B368-1638E60F3FE7</key>
@@ -1091,7 +1154,7 @@
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>440</integer>
+			<integer>380</integer>
 		</dict>
 		<key>18929585-3A68-49C5-9472-452F520834E4</key>
 		<dict>
@@ -1107,26 +1170,33 @@
 			<key>ypos</key>
 			<integer>65</integer>
 		</dict>
+		<key>1DAD602D-927A-49A8-B430-D7DF8CF46921</key>
+		<dict>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>1745</integer>
+		</dict>
 		<key>22AEA759-6C80-44E7-B346-CD03F04A4437</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>1995</integer>
+			<integer>1535</integer>
 		</dict>
 		<key>25C0C74E-0E5B-4A7D-AEB8-0083E0D595B2</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>1410</integer>
+			<integer>1115</integer>
 		</dict>
 		<key>35CB5FA6-BF41-4C43-8156-B18A6DBE0248</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>980</integer>
+			<integer>800</integer>
 		</dict>
 		<key>42B80C1B-CC96-407C-96D8-BFC04E7712BC</key>
 		<dict>
@@ -1140,77 +1210,77 @@
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>850</integer>
+			<integer>695</integer>
 		</dict>
 		<key>76DBBBB2-DACC-4B35-9A93-C6073B9C84BA</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>725</integer>
+			<integer>590</integer>
 		</dict>
 		<key>96E90A06-7D14-4E17-822E-F8956AF8D6A6</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>1275</integer>
+			<integer>1010</integer>
 		</dict>
 		<key>9882ADC5-3C84-410B-AEC7-0F906C9EA223</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>1560</integer>
+			<integer>1220</integer>
 		</dict>
 		<key>A3BC3C97-6CC7-4E29-A317-119EC3DAAB8C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>195</integer>
+			<integer>170</integer>
 		</dict>
 		<key>A608D078-BEC4-4FDF-B68C-CBEE6E6E6224</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>1700</integer>
+			<integer>1325</integer>
 		</dict>
 		<key>C4FAD516-20DF-4BEF-A034-E4335ABD6896</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>2140</integer>
+			<integer>1640</integer>
 		</dict>
 		<key>C5E81DA7-A7B6-48F8-8DA0-49DA0197BB81</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>585</integer>
+			<integer>485</integer>
 		</dict>
 		<key>E4825A44-DC65-4665-A4C8-3D70969B090F</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>1850</integer>
+			<integer>1430</integer>
 		</dict>
 		<key>F869FC45-70F6-41C6-B046-060532172660</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>1125</integer>
+			<integer>905</integer>
 		</dict>
 		<key>F9586C66-DF26-4A16-A635-CDC9C599E40A</key>
 		<dict>
 			<key>xpos</key>
 			<integer>190</integer>
 			<key>ypos</key>
-			<integer>320</integer>
+			<integer>275</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>
